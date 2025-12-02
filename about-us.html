@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>O nás – Můj projekt</title>
+    <link href="/themes/lux-bootstrap.min.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
+    <link rel="icon" href="favicon.ico" />
+  </head>
+  <body>
+    <iframe
+      src="/components/header.html"
+      style="width: 100%; height: 100%"
+      id="header"
+    ></iframe>
+
+    <!-- Obsah -->
+    <div class="container my-5">
+      <h1>O nás</h1>
+      <p>Zde napiš něco o sobě, o svých zájmech nebo o projektu.</p>
+      <!-- Tlačítka -->
+      <div class="mt-4">
+        <button
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#infoModal"
+        >
+          Otevřít modál
+        </button>
+        <a href="form.html#form" class="btn btn-success">Zaregistrujte se!</a>
+        <button class="btn btn-outline-secondary">Další akce</button>
+      </div>
+
+      <!-- Modální okno -->
+      <div class="modal fade" id="infoModal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Detailní informace</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>Zde mohou být detaily, popis produktu, fotka apod.</p>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-dismiss="modal">
+                Zavřít
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <iframe
+      src="/components/footer.html"
+      style="width: 100%"
+      id="footer"
+      class="footer-iframe"
+      title="Footer"
+      scrolling="no"
+    ></iframe>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Naše nabídka – Zmrzlio</title>
+    <link href="/themes/lux-bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <iframe
+      src="/components/header.html"
+      style="width: 100%; height: 100%"
+      id="header"
+    ></iframe>
+
+    <h1 class="text-center my-5" id="offer">Naše nabídka</h1>
+
+    <div class="container my-5 d-flex justify-content-center gap-3">
+      <div class="card" style="width: 18rem">
+        <img
+          src="/assets/images/pexels-chetanvlad-1752506.jpg"
+          class="card-img-top rounded"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Pistáciová</h5>
+          <p class="card-text">
+            Zelená legenda! Kdo nemiluje, o mnohé přichází.
+          </p>
+          <a href="#" class="btn btn-primary"
+            ><i class="bi bi-egg-fried"></i> Chci pistáciovou</a
+          >
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img
+          src="/assets/images/pexels-goumbik-1352296.jpg"
+          class="card-img-top rounded"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Čokoládová</h5>
+          <p class="card-text">
+            Čokoláda je božská mana a ztělesnění hříchu. Kdo by odolal?
+          </p>
+          <a href="#" class="btn btn-primary"
+            ><i class="bi bi-brightness-high"></i> Chci čokoládovou</a
+          >
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img
+          src="/assets/images/pexels-jill-wellington-1638660-461189.jpg"
+          class="card-img-top rounded"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Vanilková</h5>
+          <p class="card-text">
+            Čistá jak slovo boží, lahodná jak první láska.
+          </p>
+          <a href="#" class="btn btn-primary"
+            ><i class="bi bi-flower2"></i> Chci vanilkovou</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabulka -->
+    <div class="container my-5">
+      <h1>Naše zmrzliny</h1>
+      <table id="dataTable" class="table table-striped align-middle">
+        <thead>
+          <tr>
+            <th>Foto</th>
+            <th>Zmrzlina</th>
+            <th>Popis</th>
+            <th>Cena</th>
+            <th>Alergeny</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img
+                src="/assets/images/zmrzlina-01.jpg"
+                alt="Vanilková"
+                style="
+                  width: 80px;
+                  height: 60px;
+                  object-fit: cover;
+                  border-radius: 4px;
+                "
+              />
+            </td>
+            <td>Vanilková</td>
+            <td>Jemná krémová chuť s pravou vanilkou, hedvábná konzistence</td>
+            <td>45 Kč</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="/assets/images/zmrzlina-02.jpg"
+                alt="Čokoládová"
+                style="
+                  width: 80px;
+                  height: 60px;
+                  object-fit: cover;
+                  border-radius: 4px;
+                "
+              />
+            </td>
+            <td>Čokoládová</td>
+            <td>Intenzivní kakaová chuť, bohatá a sametová textura</td>
+            <td>45 Kč</td>
+            <td>7, 8</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="/assets/images/zmrzlina-03.jpg"
+                alt="Jahodová"
+                style="
+                  width: 80px;
+                  height: 60px;
+                  object-fit: cover;
+                  border-radius: 4px;
+                "
+              />
+            </td>
+            <td>Jahodová</td>
+            <td>Svěží ovocná chuť z čerstvých jahod, lehká a osvěžující</td>
+            <td>45 Kč</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="/assets/images/zmrzlina-04.jpg"
+                alt="Malinový sorbet"
+                style="
+                  width: 80px;
+                  height: 60px;
+                  object-fit: cover;
+                  border-radius: 4px;
+                "
+              />
+            </td>
+            <td>Malinový sorbet</td>
+            <td>Intenzivní malinová chuť, ledově osvěžující bez mléka</td>
+            <td>50 Kč</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="/assets/images/zmrzlina-05.jpg"
+                alt="Pistáciová"
+                style="
+                  width: 80px;
+                  height: 60px;
+                  object-fit: cover;
+                  border-radius: 4px;
+                "
+              />
+            </td>
+            <td>Pistáciová</td>
+            <td>Oříšková chuť pravých pistácií, krémová s jemnou slaností</td>
+            <td>55 Kč</td>
+            <td>7, 8</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="/assets/images/zmrzlina-06.jpg"
+                alt="Stracciatella"
+                style="
+                  width: 80px;
+                  height: 60px;
+                  object-fit: cover;
+                  border-radius: 4px;
+                "
+              />
+            </td>
+            <td>Stracciatella</td>
+            <td>
+              Vanilkový základ s kousky hořké čokolády, kontrastní textura
+            </td>
+            <td>50 Kč</td>
+            <td>7, 8</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="/assets/images/zmrzlina-07.jpg"
+                alt="Karamelová"
+                style="
+                  width: 80px;
+                  height: 60px;
+                  object-fit: cover;
+                  border-radius: 4px;
+                "
+              />
+            </td>
+            <td>Karamelová</td>
+            <td>Sladká karamelová chuť s nádechem soli, máslová konzistence</td>
+            <td>50 Kč</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="/assets/images/zmrzlina-08.jpg"
+                alt="Citronový sorbet"
+                style="
+                  width: 80px;
+                  height: 60px;
+                  object-fit: cover;
+                  border-radius: 4px;
+                "
+              />
+            </td>
+            <td>Citronový sorbet</td>
+            <td>Kyselkavě svěží chuť, ideální pro horké dny</td>
+            <td>50 Kč</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="/assets/images/zmrzlina-09.jpg"
+                alt="Kokosová"
+                style="
+                  width: 80px;
+                  height: 60px;
+                  object-fit: cover;
+                  border-radius: 4px;
+                "
+              />
+            </td>
+            <td>Kokosová</td>
+            <td>Exotická kokosová chuť, krémová s kousky kokosu</td>
+            <td>50 Kč</td>
+            <td>7, 8</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="/assets/images/zmrzlina-10.jpg"
+                alt="Slaný karamel"
+                style="
+                  width: 80px;
+                  height: 60px;
+                  object-fit: cover;
+                  border-radius: 4px;
+                "
+              />
+            </td>
+            <td>Slaný karamel</td>
+            <td>Sladko-slaná harmonie, bohatá karamelová chuť</td>
+            <td>55 Kč</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="/assets/images/zmrzlina-11.jpg"
+                alt="Lískooříšková"
+                style="
+                  width: 80px;
+                  height: 60px;
+                  object-fit: cover;
+                  border-radius: 4px;
+                "
+              />
+            </td>
+            <td>Lískooříšková</td>
+            <td>
+              Intenzivní ořechová chuť, krémová s praženými lískovými oříšky
+            </td>
+            <td>55 Kč</td>
+            <td>7, 8</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="/assets/images/zmrzlina-12.jpg"
+                alt="Lesní ovoce"
+                style="
+                  width: 80px;
+                  height: 60px;
+                  object-fit: cover;
+                  border-radius: 4px;
+                "
+              />
+            </td>
+            <td>Lesní ovoce</td>
+            <td>Mix malin, borůvek a ostružin, svěží ovocná chuť</td>
+            <td>50 Kč</td>
+            <td>7</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <iframe
+      src="/components/footer.html"
+      style="width: 100%; height: 100%"
+      id="footer"
+      title="Footer"
+    ></iframe>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

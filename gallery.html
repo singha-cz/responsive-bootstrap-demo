@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galerie – Můj projekt</title>
+    <link href="/themes/lux-bootstrap.min.css" rel="stylesheet" />
+    <style>
+      .gallery-tile {
+        aspect-ratio: 4 / 3;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+      }
+      .gallery-tile img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+      .gallery-tile:hover img {
+        transform: scale(1.05);
+      }
+      .gallery-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 25%;
+        background: rgba(255, 255, 255, 0.8);
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem;
+        text-align: center;
+      }
+      .modal-close-floating {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+        transition: background 0.2s ease;
+      }
+      .modal-close-floating:hover {
+        background: rgba(255, 255, 255, 1);
+      }
+    </style>
+  </head>
+  <body>
+    <iframe
+      src="/components/header.html"
+      style="width: 100%; height: 100%"
+      id="header"
+    ></iframe>
+
+    <!-- Galerie -->
+    <div class="container my-5">
+      <h1 class="mb-4">Nech se inspirovat</h1>
+      <div class="row g-4">
+        <!-- Řádek 1 -->
+        <div class="col-md-4">
+          <div
+            class="gallery-tile rounded-3"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-img="/assets/images/zmrzlina-01.jpg"
+          >
+            <img src="/assets/images/zmrzlina-01.jpg" alt="Zmrzlina 1" />
+            <div class="gallery-caption rounded-bottom-3">
+              Lahodná vanilková zmrzlina v kornoutu.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            class="gallery-tile rounded-3"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-img="/assets/images/zmrzlina-02.jpg"
+          >
+            <img src="/assets/images/zmrzlina-02.jpg" alt="Zmrzlina 2" />
+            <div class="gallery-caption rounded-bottom-3">
+              Čokoládová zmrzlina s polevou.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            class="gallery-tile rounded-3"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-img="/assets/images/zmrzlina-03.jpg"
+          >
+            <img src="/assets/images/zmrzlina-03.jpg" alt="Zmrzlina 3" />
+            <div class="gallery-caption rounded-bottom-3">
+              Barevné kopečky zmrzliny v misce.
+            </div>
+          </div>
+        </div>
+        <!-- Řádek 2 -->
+        <div class="col-md-4">
+          <div
+            class="gallery-tile rounded-3"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-img="/assets/images/zmrzlina-04.jpg"
+          >
+            <img src="/assets/images/zmrzlina-04.jpg" alt="Zmrzlina 4" />
+            <div class="gallery-caption rounded-bottom-3">
+              Osvěžující jahodová zmrzlina.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            class="gallery-tile rounded-3"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-img="/assets/images/zmrzlina-05.jpg"
+          >
+            <img src="/assets/images/zmrzlina-05.jpg" alt="Zmrzlina 5" />
+            <div class="gallery-caption rounded-bottom-3">
+              Domácí zmrzina s ovocem.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            class="gallery-tile rounded-3"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-img="/assets/images/zmrzlina-06.jpg"
+          >
+            <img src="/assets/images/zmrzlina-06.jpg" alt="Zmrzlina 6" />
+            <div class="gallery-caption rounded-bottom-3">
+              Zmrzlinový pohár s šlehačkou.
+            </div>
+          </div>
+        </div>
+        <!-- Řádek 3 -->
+        <div class="col-md-4">
+          <div
+            class="gallery-tile rounded-3"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-img="/assets/images/zmrzlina-07.jpg"
+          >
+            <img src="/assets/images/zmrzlina-07.jpg" alt="Zmrzlina 7" />
+            <div class="gallery-caption rounded-bottom-3">
+              Pistáciová zmrzlina na talířku.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            class="gallery-tile rounded-3"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-img="/assets/images/zmrzlina-08.jpg"
+          >
+            <img src="/assets/images/zmrzlina-08.jpg" alt="Zmrzlina 8" />
+            <div class="gallery-caption rounded-bottom-3">
+              Letní osvěžení v podobě zmrzliny.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            class="gallery-tile rounded-3"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-img="/assets/images/zmrzlina-09.jpg"
+          >
+            <img src="/assets/images/zmrzlina-09.jpg" alt="Zmrzlina 9" />
+            <div class="gallery-caption rounded-bottom-3">
+              Zmrzlina na dřevěné tyčce.
+            </div>
+          </div>
+        </div>
+        <!-- Řádek 4 -->
+        <div class="col-md-4">
+          <div
+            class="gallery-tile rounded-3"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-img="/assets/images/zmrzlina-10.jpg"
+          >
+            <img src="/assets/images/zmrzlina-10.jpg" alt="Zmrzlina 10" />
+            <div class="gallery-caption rounded-bottom-3">
+              Krémová zmrzlina s karamelem.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            class="gallery-tile rounded-3"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-img="/assets/images/zmrzlina-11.jpg"
+          >
+            <img src="/assets/images/zmrzlina-11.jpg" alt="Zmrzlina 11" />
+            <div class="gallery-caption rounded-bottom-3">
+              Řemeslná zmrzlina z cukrárny.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            class="gallery-tile rounded-3"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-img="/assets/images/zmrzlina-12.jpg"
+          >
+            <img src="/assets/images/zmrzlina-12.jpg" alt="Zmrzlina 12" />
+            <div class="gallery-caption rounded-bottom-3">
+              Zmrzlina s čerstvými malinami.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content rounded-4 overflow-hidden">
+          <div class="modal-body p-0 position-relative">
+            <button
+              type="button"
+              class="modal-close-floating"
+              data-bs-dismiss="modal"
+              aria-label="Zavřít"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <img
+              src=""
+              id="modalImage"
+              class="img-fluid w-100"
+              alt="Zvětšený obrázek"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <iframe
+      src="/components/footer.html"
+      style="width: 100%; height: 100%"
+      id="footer"
+      title="Footer"
+    ></iframe>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.querySelectorAll(".gallery-tile").forEach((tile) => {
+        tile.addEventListener("click", function () {
+          const imgSrc = this.getAttribute("data-img");
+          document.getElementById("modalImage").src = imgSrc;
+        });
+      });
+    </script>
+  </body>
+</html>

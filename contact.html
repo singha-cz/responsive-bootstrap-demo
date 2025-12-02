@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kontakt – Můj projekt</title>
+    <link href="/themes/lux-bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <iframe
+      src="/components/header.html"
+      style="width: 100%; height: 100%"
+      id="header"
+    ></iframe>
+
+    <div class="container my-5">
+      <h1>Napište nám…</h1>
+      <form class="row g-3">
+        <div class="col-md-6">
+          <label for="jmeno" class="form-label">Jméno</label>
+          <input type="text" class="form-control" id="jmeno" />
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" class="form-control" id="email" />
+        </div>
+        <div class="col-12">
+          <label for="adresa" class="form-label">Adresa</label>
+          <input type="text" class="form-control" id="adresa" />
+        </div>
+        <div class="col-md-6">
+          <label for="mesto" class="form-label">Město</label>
+          <input type="text" class="form-control" id="mesto" />
+        </div>
+        <div class="col-md-4">
+          <label for="stat" class="form-label">Stát</label>
+          <select id="stat" class="form-select">
+            <option>Česko</option>
+            <option>Slovensko</option>
+            <option>Jiné</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label for="psc" class="form-label">PSČ</label>
+          <input type="text" class="form-control" id="psc" />
+        </div>
+        <div class="col-12">
+          <label class="form-label">Pohlaví</label><br />
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="pohlavi"
+              id="muz"
+              value="muz"
+            />
+            <label class="form-check-label" for="muz">Muž</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="pohlavi"
+              id="zena"
+              value="zena"
+            />
+            <label class="form-check-label" for="zena">Žena</label>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="souhlas" />
+            <label class="form-check-label" for="souhlas">
+              Souhlasím se zpracováním osobních údajů
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <label for="poznamka" class="form-label"
+            >Potřebujete nám sdělit ještě něco?</label
+          >
+          <textarea id="poznamka" class="form-control" rows="3"></textarea>
+        </div>
+        <div class="col-12 d-inline-flex justify-content-end">
+          <button type="submit" class="btn btn-primary">Odeslat</button>
+        </div>
+      </form>
+    </div>
+
+    <iframe
+      src="/components/footer.html"
+      style="width: 100%; height: 100%"
+      id="footer"
+      title="Footer"
+    ></iframe>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

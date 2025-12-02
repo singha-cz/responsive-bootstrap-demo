@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog – Zmrzlio</title>
+    <link href="/themes/lux-bootstrap.min.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      .blog-article-card {
+        height: 270px;
+        overflow: hidden;
+      }
+      .blog-article-card .row {
+        height: 100%;
+      }
+      .blog-article-card .col-md-4 {
+        height: 100%;
+      }
+      .blog-article-card img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        max-height: 270px;
+      }
+      .blog-article-card .col-md-8 {
+        position: relative;
+      }
+      .blog-article-card .card-body {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+      .blog-article-card .btn-read {
+        position: absolute;
+        right: 2rem;
+        bottom: 1rem;
+      }
+
+      @media (max-width: 767px) {
+        .blog-article-card {
+          height: auto;
+          overflow: visible;
+        }
+        .blog-article-card .row {
+          height: auto;
+        }
+        .blog-article-card .col-md-4 {
+          height: auto;
+        }
+        .blog-article-card img {
+          height: auto;
+          max-height: none;
+        }
+        .blog-article-card .btn-read {
+          position: static;
+          margin-top: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <iframe
+      src="/components/header.html"
+      style="width: 100%; height: 100%"
+      id="header"
+    ></iframe>
+
+    <div class="container my-5">
+      <h1 class="mb-4">Blog</h1>
+
+      <!-- Hlavní článek -->
+      <article class="card mb-5 border-0 shadow-sm">
+        <div class="row g-0">
+          <div class="col-md-6">
+            <img
+              src="./assets/images/pexels-1.jpeg"
+              class="img-fluid rounded-start h-100 object-fit-cover"
+              alt="Čokoládový zmrzlinový kornout v horkém létě"
+            />
+          </div>
+          <div class="col-md-6 d-flex align-items-start">
+            <div class="card-body p-4">
+              <h2 class="card-title">
+                Nové trendy ve zmrzlinových polevách pro rok 2025
+              </h2>
+              <p class="text-muted mb-2">
+                <small>
+                  <i class="bi bi-calendar me-1"></i>1. prosince 2025
+                  <span class="mx-2">|</span>
+                  <span class="badge bg-info">Tipy</span>
+                </small>
+              </p>
+              <p class="card-text">
+                Objevte nejnovější trendy v oblasti zmrzlinových polev, které
+                ovládnou letošní sezónu. Od exotických příchutí po zdravější
+                alternativy – připravili jsme pro vás kompletní přehled toho, co
+                rozhodně musíte ochutnat. V článku najdete také jednoduché
+                recepty a tipy, jak tyto polevy připravit doma bez složitých
+                ingrediencí. Poradíme, jak kombinovat textury a barvy, aby vaše
+                dezerty vypadaly profesionálně. Nezapomněli jsme ani na rady pro
+                alergiky a vegany, takže si může vybrat opravdu každý.
+              </p>
+              <div class="text-end">
+                <a href="#" class="btn btn-primary">Přečíst</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Seznam článků -->
+      <div class="row">
+        <!-- Článek 1 -->
+        <div class="col-12 mb-4">
+          <article class="card border-0 shadow-sm blog-article-card">
+            <div class="row g-0">
+              <div class="col-md-4 overflow-hidden">
+                <img
+                  src="./assets/images/pexels-2.jpeg"
+                  class="img-fluid rounded-start"
+                  alt="Čokoládová poleva"
+                />
+              </div>
+              <div class="col-md-8 d-flex align-items-start">
+                <div class="card-body">
+                  <p class="text-muted mb-1">
+                    <small>
+                      <i class="bi bi-calendar me-1"></i>28. listopadu 2025
+                      <span class="mx-2">|</span>
+                      <span class="badge bg-danger">Recepty</span>
+                    </small>
+                  </p>
+                  <h5 class="card-title">
+                    Domácí čokoládová poleva jako od profesionálů
+                  </h5>
+                  <p class="card-text">
+                    Naučte se připravit dokonalou lesklou čokoládovou polevu,
+                    která na zmrzlině okamžitě ztuhne a vytvoří křupavou vrstvu.
+                    Recept zvládne i začátečník během pár minut. Stačí jen tři
+                    ingredience, které máte doma.
+                  </p>
+                  <a href="#" class="btn btn-sm btn-primary btn-read"
+                    >Přečíst</a
+                  >
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Článek 2 -->
+        <div class="col-12 mb-4">
+          <article class="card border-0 shadow-sm blog-article-card">
+            <div class="row g-0">
+              <div class="col-md-4 overflow-hidden">
+                <img
+                  src="./assets/images/pexels-3.jpeg"
+                  class="img-fluid rounded-start"
+                  alt="Nanuky na tyčce"
+                />
+              </div>
+              <div class="col-md-8 d-flex align-items-start">
+                <div class="card-body">
+                  <p class="text-muted mb-1">
+                    <small>
+                      <i class="bi bi-calendar me-1"></i>25. listopadu 2025
+                      <span class="mx-2">|</span>
+                      <span class="badge bg-info">Tipy</span>
+                    </small>
+                  </p>
+                  <h5 class="card-title">
+                    5 tipů jak vybrat kvalitní nanuk v obchodě
+                  </h5>
+                  <p class="card-text">
+                    Jak poznat kvalitní nanuk od levné náhražky? Prozradíme vám,
+                    na co si dát pozor při čtení etikety a složení. Váš další
+                    nákup zmrzliny bude mnohem lepší.
+                  </p>
+                  <a href="#" class="btn btn-sm btn-primary btn-read"
+                    >Přečíst</a
+                  >
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Článek 3 -->
+        <div class="col-12 mb-4">
+          <article class="card border-0 shadow-sm blog-article-card">
+            <div class="row g-0">
+              <div class="col-md-4 overflow-hidden">
+                <img
+                  src="./assets/images/pexels-4.jpeg"
+                  class="img-fluid rounded-start"
+                  alt="Čerstvé ovoce na zmrzlinu"
+                />
+              </div>
+              <div class="col-md-8 d-flex align-items-start">
+                <div class="card-body">
+                  <p class="text-muted mb-1">
+                    <small>
+                      <i class="bi bi-calendar me-1"></i>22. listopadu 2025
+                      <span class="mx-2">|</span>
+                      <span class="badge bg-success">Zdraví</span>
+                    </small>
+                  </p>
+                  <h5 class="card-title">
+                    Ovocné polevy bez cukru – zdravější volba pro celou rodinu
+                  </h5>
+                  <p class="card-text">
+                    Představujeme vám recepty na domácí ovocné polevy, které
+                    jsou sladké přirozeně a neobsahují přidaný cukr. Ideální
+                    volba pro děti i dospělé, kteří hlídají svůj příjem cukru.
+                    Vyzkoušejte naši jahodovou nebo mangovou variantu.
+                  </p>
+                  <a href="#" class="btn btn-sm btn-primary btn-read"
+                    >Přečíst</a
+                  >
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Článek 4 -->
+        <div class="col-12 mb-4">
+          <article class="card border-0 shadow-sm blog-article-card">
+            <div class="row g-0">
+              <div class="col-md-4 overflow-hidden">
+                <img
+                  src="./assets/images/pexels-5.jpeg"
+                  class="img-fluid rounded-start"
+                  alt="Zmrzlinový kornout"
+                />
+              </div>
+              <div class="col-md-8 d-flex align-items-start">
+                <div class="card-body">
+                  <p class="text-muted mb-1">
+                    <small>
+                      <i class="bi bi-calendar me-1"></i>19. listopadu 2025
+                      <span class="mx-2">|</span>
+                      <span class="badge bg-info">Tipy</span>
+                    </small>
+                  </p>
+                  <h5 class="card-title">
+                    Historie zmrzlinového kornoutu – od náhody k ikoně
+                  </h5>
+                  <p class="card-text">
+                    Věděli jste, že zmrzlinový kornout vznikl čistě náhodou?
+                    Přečtěte si fascinující příběh jeho vzniku. Tento vynález
+                    navždy změnil způsob, jakým si užíváme zmrzlinu. Příběh
+                    začíná na světové výstavě v roce 1904.
+                  </p>
+                  <a href="#" class="btn btn-sm btn-primary btn-read"
+                    >Přečíst</a
+                  >
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Článek 5 -->
+        <div class="col-12 mb-4">
+          <article class="card border-0 shadow-sm blog-article-card">
+            <div class="row g-0">
+              <div class="col-md-4 overflow-hidden">
+                <img
+                  src="./assets/images/pexels-6.jpeg"
+                  class="img-fluid rounded-start"
+                  alt="Barevné cukrové posypy"
+                />
+              </div>
+              <div class="col-md-8 d-flex align-items-start">
+                <div class="card-body">
+                  <p class="text-muted mb-1">
+                    <small>
+                      <i class="bi bi-calendar me-1"></i>16. listopadu 2025
+                      <span class="mx-2">|</span>
+                      <span class="badge bg-danger">Zdobení</span>
+                    </small>
+                  </p>
+                  <h5 class="card-title">
+                    Barevné posypy a jejich tajemství – co je v nich skutečně?
+                  </h5>
+                  <p class="card-text">
+                    Rozbor nejoblíbenějších cukrovinek a posypů na zmrzlinu.
+                    Zjistěte, které jsou vhodné i pro alergiky. Přinášíme také
+                    tipy na zdravější alternativy. Barevné posypy mohou být i
+                    přírodní a bez umělých barviv.
+                  </p>
+                  <a href="#" class="btn btn-sm btn-primary btn-read"
+                    >Přečíst</a
+                  >
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Článek 6 -->
+        <div class="col-12 mb-4">
+          <article class="card border-0 shadow-sm blog-article-card">
+            <div class="row g-0">
+              <div class="col-md-4 overflow-hidden">
+                <img
+                  src="./assets/images/pexels-7.jpeg"
+                  class="img-fluid rounded-start"
+                  alt="Nanuky v mrazáku"
+                />
+              </div>
+              <div class="col-md-8 d-flex align-items-start">
+                <div class="card-body">
+                  <p class="text-muted mb-1">
+                    <small>
+                      <i class="bi bi-calendar me-1"></i>10. listopadu 2025
+                      <span class="mx-2">|</span>
+                      <span class="badge bg-info">Tipy</span>
+                    </small>
+                  </p>
+                  <h5 class="card-title">
+                    Jak správně skladovat nanuky doma – chyby, kterých se
+                    vyvarovat
+                  </h5>
+                  <p class="card-text">
+                    Špatné skladování může zničit i ten nejlepší nanuk. Poradíme
+                    vám, jak udržet zmrzlinu v perfektní kondici. Vyhněte se
+                    nejběžnějším chybám, které dělá většina lidí. Správná
+                    teplota mrazáku je klíčem k dokonalosti.
+                  </p>
+                  <a href="#" class="btn btn-sm btn-primary btn-read"
+                    >Přečíst</a
+                  >
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Článek 8 -->
+        <div class="col-12 mb-4">
+          <article class="card border-0 shadow-sm blog-article-card">
+            <div class="row g-0">
+              <div class="col-md-4 overflow-hidden">
+                <img
+                  src="./assets/images/pexels-8.jpeg"
+                  class="img-fluid rounded-start"
+                  alt="Kokos a avokádo"
+                />
+              </div>
+              <div class="col-md-8 d-flex align-items-start">
+                <div class="card-body">
+                  <p class="text-muted mb-1">
+                    <small>
+                      <i class="bi bi-calendar me-1"></i>7. listopadu 2025
+                      <span class="mx-2">|</span>
+                      <span class="badge bg-success">Zdraví</span>
+                    </small>
+                  </p>
+                  <h5 class="card-title">
+                    Veganské alternativy zmrzlinových polev – kokos, avokádo a
+                    další
+                  </h5>
+                  <p class="card-text">
+                    Pro všechny, kdo se vyhýbají mléčným výrobkům –
+                    představujeme nejlepší veganské polevy na trhu i domácí
+                    recepty. Chuťově jsou naprosto skvělé a potěší každého
+                    gurmána. Všechny recepty jsou bez laktózy a živočišných
+                    produktů.
+                  </p>
+                  <a href="#" class="btn btn-sm btn-primary btn-read"
+                    >Přečíst</a
+                  >
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <iframe
+      src="/components/footer.html"
+      style="width: 100%; height: 100%"
+      id="footer"
+      title="Footer"
+    ></iframe>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+:root {
+  --bs-breadcrumb-bg: none;
+  --bs-nav-tabs-link-active-border-color: black;
+}
+
+/* Skrýt breadcrumbs, pokud není žádná stránka targetovaná */
+#breadcrumb-nav {
+  display: none;
+}
+
+/* Zobrazit breadcrumbs pouze pokud má některá stránka :target */
+#breadcrumb-nav:has(:target) {
+  display: block;
+}
+
+/* Skrýt jednotlivé crumbs, které nejsou targetované */
+.crumbs:not(:target) {
+  display: none;
+}
+.carousel {
+  max-height: 30vh; /* maximální výška */
+  overflow: hidden; /* skryje části obrázku přesahující výšku */
+  position: relative;
+  border-radius: 8px;
+}
+.carousel-item img {
+  height: 50vh;
+  object-fit: cover;
+  z-index: 0;
+}
+.footer-iframe {
+  border: none;
+  height: 240px;
+  overflow: hidden;
+}
+.nav-tabs .nav-link {
+  border-bottom: 1px solid var(--bs-nav-tabs-border-color);
+}
+
+.nav-tabs .nav-link.active {
+  border: none;
+  font-weight: bold;
+}
