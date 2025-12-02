@@ -7,52 +7,147 @@
     <link href="/themes/lux-bootstrap.min.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
     <link rel="icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
   </head>
   <body>
-    <iframe
-      src="/components/header.html"
-      style="width: 100%; height: 100%"
-      id="header"
-    ></iframe>
+    <iframe src="/components/header.html" style="width: 100%; height: 100%" id="header"></iframe>
 
     <!-- Obsah -->
     <div class="container my-5">
-      <h1>O nás</h1>
-      <p>Zde napiš něco o sobě, o svých zájmech nebo o projektu.</p>
-      <!-- Tlačítka -->
-      <div class="mt-4">
-        <button
-          class="btn btn-primary"
-          data-bs-toggle="modal"
-          data-bs-target="#infoModal"
-        >
-          Otevřít modál
-        </button>
-        <a href="form.html#form" class="btn btn-success">Zaregistrujte se!</a>
-        <button class="btn btn-outline-secondary">Další akce</button>
+      <!-- Úvod -->
+      <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold mb-3">O nás</h1>
+        <p class="lead text-muted col-lg-8 mx-auto">
+          Jsme společnost Zmrzlio, která se specializuje na výrobu prémiové řemeslné zmrzliny.
+          Používáme pouze kvalitní suroviny a tradiční recepty, abychom vám přinesli autentickou
+          chuť a nezapomenutelný zážitek.
+        </p>
       </div>
 
-      <!-- Modální okno -->
-      <div class="modal fade" id="infoModal" tabindex="-1">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Detailní informace</h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-              ></button>
+      <!-- Historie - Timeline -->
+      <div class="row mb-5">
+        <div class="col-12">
+          <h2 class="text-center mb-5">Naše cesta</h2>
+
+          <!-- Vertikální Timeline -->
+          <div class="timeline position-relative mx-auto" style="max-width: 900px">
+            <!-- Milestone 1 - vlevo -->
+            <div class="row mb-5 position-relative">
+              <div class="col-md-6 text-md-end pe-md-5">
+                <div class="bg-white p-4 rounded-3 shadow-sm">
+                  <h4 class="fw-bold text-primary mb-2">2009</h4>
+                  <h5 class="fw-semibold mb-3">Začátky</h5>
+                  <p class="text-muted mb-0">
+                    Založení firmy jako rodinného podniku. Začínali jsme s jedním zakladatelem a
+                    velkými ambicemi.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6 d-none d-md-block"></div>
+              <!-- Ikona -->
+              <div
+                class="position-absolute top-0 start-50 translate-middle bg-white border border-primary border-3 rounded-circle d-flex align-items-center justify-content-center"
+                style="width: 60px; height: 60px; z-index: 10"
+              >
+                <i class="bi bi-flag-fill text-primary fs-4"></i>
+              </div>
             </div>
-            <div class="modal-body">
-              <p>Zde mohou být detaily, popis produktu, fotka apod.</p>
+
+            <!-- Milestone 2 - vpravo -->
+            <div class="row mb-5 position-relative">
+              <div class="col-md-6 d-none d-md-block"></div>
+              <div class="col-md-6 ps-md-5">
+                <div class="bg-white p-4 rounded-3 shadow-sm">
+                  <h4 class="fw-bold text-primary mb-2">2014</h4>
+                  <h5 class="fw-semibold mb-3">První prodejna</h5>
+                  <p class="text-muted mb-0">
+                    Otevřeli jsme naši první kamennou prodejnu a rozšířili tým na 5 zaměstnanců.
+                  </p>
+                </div>
+              </div>
+              <!-- Ikona -->
+              <div
+                class="position-absolute top-0 start-50 translate-middle bg-white border border-primary border-3 rounded-circle d-flex align-items-center justify-content-center"
+                style="width: 60px; height: 60px; z-index: 10"
+              >
+                <i class="bi bi-shop text-primary fs-4"></i>
+              </div>
             </div>
-            <div class="modal-footer">
-              <button class="btn btn-secondary" data-bs-dismiss="modal">
-                Zavřít
-              </button>
+
+            <!-- Milestone 3 - vlevo -->
+            <div class="row mb-5 position-relative">
+              <div class="col-md-6 text-md-end pe-md-5">
+                <div class="bg-white p-4 rounded-3 shadow-sm">
+                  <h4 class="fw-bold text-primary mb-2">2019</h4>
+                  <h5 class="fw-semibold mb-3">Ocenění</h5>
+                  <p class="text-muted mb-0">
+                    Získali jsme prestižní ocenění "Nejlepší zmrzlina roku" a expandovali na 15
+                    zaměstnanců.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6 d-none d-md-block"></div>
+              <!-- Ikona -->
+              <div
+                class="position-absolute top-0 start-50 translate-middle bg-white border border-primary border-3 rounded-circle d-flex align-items-center justify-content-center"
+                style="width: 60px; height: 60px; z-index: 10"
+              >
+                <i class="bi bi-trophy-fill text-primary fs-4"></i>
+              </div>
+            </div>
+
+            <!-- Milestone 4 - vpravo -->
+            <div class="row mb-5 position-relative">
+              <div class="col-md-6 d-none d-md-block"></div>
+              <div class="col-md-6 ps-md-5">
+                <div class="bg-white p-4 rounded-3 shadow-sm">
+                  <h4 class="fw-bold text-primary mb-2">2025</h4>
+                  <h5 class="fw-semibold mb-3">Dnešek</h5>
+                  <p class="text-muted mb-0">
+                    Dnes jsme tým 25 profesionálů s několika pobočkami a stále rostoucí základnou
+                    spokojených zákazníků.
+                  </p>
+                </div>
+              </div>
+              <!-- Ikona -->
+              <div
+                class="position-absolute top-0 start-50 translate-middle bg-white border border-primary border-3 rounded-circle d-flex align-items-center justify-content-center"
+                style="width: 60px; height: 60px; z-index: 10"
+              >
+                <i class="bi bi-people-fill text-primary fs-4"></i>
+              </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div
+        class="position-relative text-center py-5 rounded overflow-hidden"
+        style="min-height: 350px"
+      >
+        <!-- Pozadí s fotografií -->
+        <div
+          class="position-absolute top-0 start-0 w-100 h-100"
+          style="
+            background-image: url('https://images.pexels.com/photos/6551710/pexels-photo-6551710.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            filter: blur(3px) brightness(0.7);
+            z-index: 1;
+          "
+        ></div>
+
+        <!-- Obsah -->
+        <div class="position-relative text-white" style="z-index: 2">
+          <h3 class="mb-4 fw-bold text-light">Chcete vědět více?</h3>
+          <p class="lead mb-4">Rádi odpovíme na vaše dotazy a pozveme vás na ochutnávku.</p>
+          <a href="contact.html" class="btn btn-light btn-lg shadow">
+            <i class="bi bi-envelope-fill me-2"></i>Spojte se s námi
+          </a>
         </div>
       </div>
     </div>
