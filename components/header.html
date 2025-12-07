@@ -24,9 +24,11 @@
   </head>
   <body>
     <!-- Navigace -->
-    <nav class="navbar navbar-expand-lg">
+    <!-- <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="../index.html" target="_parent">🍦 Zmrzlio</a>
+        <a class="navbar-brand fw-bold" href="../index.html" target="_parent"
+          >🍦 Zmrzlio</a
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -41,38 +43,102 @@
               <a class="nav-link" href="../index.html" target="_parent">Úvod</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../about-us.html#about-us" target="_parent">O nás</a>
+              <a
+                class="nav-link"
+                href="../about-us.html#about-us"
+                target="_parent"
+                >O nás</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../gallery.html#gallery" target="_parent">Galerie</a>
+              <a
+                class="nav-link"
+                href="../gallery.html#gallery"
+                target="_parent"
+                >Galerie</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../blog.html#blog" target="_parent">Blog</a>
+              <a class="nav-link" href="../blog.html#blog" target="_parent"
+                >Blog</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../offer.html#offer" target="_parent">Naše zmrzliny</a>
+              <a class="nav-link" href="../offer.html#offer" target="_parent"
+                >Naše zmrzliny</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../contact.html#contact" target="_parent">Kontakt</a>
+              <a
+                class="nav-link"
+                href="../contact.html#contact"
+                target="_parent"
+                >Kontakt</a
+              >
             </li>
           </ul>
         </div>
       </div>
-    </nav>
+    </nav> -->
 
     <!-- Breadcrumbs -->
-    <nav class="container mt-3 breadcrumbs" aria-label="breadcrumb" id="breadcrumb-nav">
+    <!-- <nav
+      class="container mt-3 breadcrumbs"
+      aria-label="breadcrumb"
+      id="breadcrumb-nav"
+    >
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="../index.html" target="_parent"><i class="bi bi-house"></i></a>
+          <a href="../index.html" target="_parent"
+            ><i class="bi bi-house"></i
+          ></a>
         </li>
 
-        <li class="breadcrumb-item crumbs" aria-current="page" id="contact">Kontakt</li>
-        <li class="breadcrumb-item crumbs" aria-current="page" id="about-us">O nás</li>
-        <li class="breadcrumb-item crumbs" aria-current="page" id="gallery">Galerie</li>
-        <li class="breadcrumb-item crumbs" aria-current="page" id="blog">Blog</li>
-        <li class="breadcrumb-item active crumbs" aria-current="page" id="offer">Naše zmrzliny</li>
+        <li class="breadcrumb-item crumbs" aria-current="page" id="contact">
+          Kontakt
+        </li>
+        <li class="breadcrumb-item crumbs" aria-current="page" id="about-us">
+          O nás
+        </li>
+        <li class="breadcrumb-item crumbs" aria-current="page" id="gallery">
+          Galerie
+        </li>
+        <li class="breadcrumb-item crumbs" aria-current="page" id="blog">
+          Blog
+        </li>
+        <li
+          class="breadcrumb-item active crumbs"
+          aria-current="page"
+          id="offer"
+        >
+          Naše zmrzliny
+        </li>
       </ol>
-    </nav>
+    </nav> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Zavírací tlačítko pro fullscreen menu
+      document.addEventListener("click", function (e) {
+        const navCollapse = document.getElementById("mainNav");
+        // Klik na ::before (zavírací X) - detekujeme klik v pravém horním rohu
+        if (navCollapse.classList.contains("show")) {
+          const rect = navCollapse.getBoundingClientRect();
+          if (e.clientX > rect.right - 60 && e.clientY < rect.top + 60) {
+            const bsCollapse = bootstrap.Collapse.getInstance(navCollapse);
+            if (bsCollapse) bsCollapse.hide();
+          }
+        }
+      });
+
+      // Zavřít menu po kliknutí na odkaz
+      document.querySelectorAll("#mainNav .nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          const navCollapse = document.getElementById("mainNav");
+          const bsCollapse = bootstrap.Collapse.getInstance(navCollapse);
+          if (bsCollapse) bsCollapse.hide();
+        });
+      });
+    </script>
   </body>
 </html>

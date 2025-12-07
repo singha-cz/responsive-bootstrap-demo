@@ -7,18 +7,10 @@
     <link href="/themes/lux-bootstrap.min.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
     <link rel="icon" href="favicon.ico" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
   </head>
-  <body>
-    <iframe
-      src="/components/header.html"
-      style="width: 100%; height: 100%"
-      id="header"
-      title="Header"
-    ></iframe>
+  <body class="home">
+    <site-header></site-header>
+    <script type="module" src="/components/header-component.js"></script>
     <!-- Carousel -->
     <div class="container">
       <div
@@ -100,8 +92,10 @@
     <div class="container my-5">
       <h1 class="text-center" id="offer">Zmrzku nebo svařák? Zmrzku!</h1>
 
-      <div class="container my-5 d-flex justify-content-center gap-3">
-        <div class="card shadow" style="width: 18rem">
+      <div
+        class="container my-5 d-flex justify-content-center gap-3 home-cards"
+      >
+        <div class="card shadow row-gap-md-3">
           <img
             src="./assets/images/pexels-chetanvlad-1752506.jpg"
             class="card-img-top rounded"
@@ -117,7 +111,7 @@
             >
           </div>
         </div>
-        <div class="card shadow" style="width: 18rem">
+        <div class="card shadow">
           <img
             src="./assets/images/pexels-goumbik-1352296.jpg"
             class="card-img-top rounded"
@@ -133,7 +127,7 @@
             >
           </div>
         </div>
-        <div class="card shadow" style="width: 18rem">
+        <div class="card shadow">
           <img
             src="./assets/images/pexels-jill-wellington-1638660-461189.jpg"
             class="card-img-top rounded"
@@ -142,7 +136,7 @@
           <div class="card-body">
             <h5 class="card-title">Vanilková</h5>
             <p class="card-text">
-              Čistá jak slovo boží, lahodná jak první láska.
+              Čistá jak lesní studánka, lahodná jak první láska.
             </p>
             <a href="#" class="btn btn-primary"
               ><i class="bi bi-flower2"></i> Chci vanilkovou</a
@@ -150,6 +144,8 @@
           </div>
         </div>
       </div>
+
+      <h2 class="text-center my-5">Proč si vybrat naši zmrzlinu</h2>
 
       <!-- Záložky -->
       <ul class="nav nav-tabs" id="myTabs" role="tablist">
@@ -161,7 +157,7 @@
             data-bs-target="#tab1"
             type="button"
           >
-            Pistáciová
+            Přírodní suroviny
           </button>
         </li>
         <li class="nav-item" role="presentation">
@@ -172,7 +168,7 @@
             data-bs-target="#tab2"
             type="button"
           >
-            Čokoládová
+            Lokální výroba
           </button>
         </li>
         <li class="nav-item" role="presentation">
@@ -183,7 +179,7 @@
             data-bs-target="#tab3"
             type="button"
           >
-            Vanilková
+            Točíme s láskou
           </button>
         </li>
       </ul>
@@ -192,24 +188,28 @@
         id="myTabsContent"
       >
         <div class="tab-pane fade show active" id="tab1">
-          Pistáciová zmrzlina okouzlí svou elegantní chutí a přírodním oříškovým
-          aroma. Jemně zelený odstín a lehce slaná pistáciová nota vytvářejí
-          harmonii, která osvěží a zároveň pohladí chuťové pohárky. Je ideální
-          volbou pro ty, kdo hledají něco nevšedního, ale přesto delikátně
-          vyváženého.
+          Věříme na sílu přírody! Naše zmrzlina je vyrobena pouze z
+          nejkvalitnějších přírodních surovin bez umělých barviv, konzervantů a
+          aromaterických látek. Každá ingredience je pečlivě vybrána od místních
+          dodavatelů, kteří sdílejí naši vizi zdravé a čisté výroby. Od bio mlék
+          po čerstvé ovoce – všechno, co do vaší zmrzliny patří, pochází z
+          přírody a má duši.
         </div>
         <div class="tab-pane fade" id="tab2">
-          Čokoládová zmrzlina je klasika, která nikdy nezklame. Její bohatá,
-          sametově hebká chuť se rozplývá na jazyku a zanechává jemnou stopu
-          kakaa, která potěší všechny milovníky sladkého hříchu. Každá lžička
-          nabízí dokonalou rovnováhu mezi intenzivní čokoládovou chutí a jemnou
-          krémovostí, která vás láká k dalšímu soustu.
+          Naše zmrzlina je hrdostí místní produkce! Vyrábíme ji přímo zde v
+          našich provozovnách s důrazem na tradici a kvalitu. Každá dávka je
+          připravena свěže, bez zbytečného skladování a distribuce. Podporujeme
+          místní ekonomiku a zajišťujeme, že vaše oblíbené chutě jsou co
+          nejčerstvější. Díky lokální výrobě můžeme reagovat na sezónní
+          ingredience a přinášet vám vždy nejlepší možný produkt.
         </div>
         <div class="tab-pane fade" id="tab3">
-          Vanilková zmrzlina je symbolem čistoty a poctivé chuti. Z pravé
-          vanilky voní po léte, domovu a radosti. Její jemná krémová textura a
-          sladká vůně tvoří dokonalý základ pro jakékoli dezerty, ale stejně
-          skvěle vynikne i samotná – jako malý kousek dokonalého potěšení.
+          Každá porce zmrzliny, kterou vám podáváme, je vytvořena s absolutní
+          vášní a péčí. Naši mistři zmrzlináři mají desetiletí zkušeností a
+          věnují se své práci jako umělci. Věříme, že kvalita se pozná na první
+          ochutnaní – v každém lžičku cítíte naši dedikaci a lásku k řemeslu.
+          Není to jen zmrzlina, je to příběh, tradice a radost sdílená s vámi.
+          Točíme pro vás s úsměvem a srdcem!
         </div>
       </div>
     </div>

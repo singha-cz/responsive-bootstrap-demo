@@ -6,749 +6,1040 @@
     <title>Naše nabídka – Zmrzlio</title>
     <link href="/themes/lux-bootstrap.min.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
+
     <link
       rel="stylesheet"
       href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.bootstrap5.min.css"
+    />
   </head>
-  <body>
-    <iframe src="/components/header.html" style="width: 100%; height: 100%" id="header"></iframe>
+  <body class="offer">
+    <site-header></site-header>
+    <script type="module" src="/components/header-component.js"></script>
 
     <!-- Tabulka -->
     <div class="container my-5">
       <h1>Naše zmrzliny</h1>
-      <table id="dataTable" class="table table-striped align-middle">
-        <thead>
-          <tr>
-            <th>Foto</th>
-            <th>Zmrzlina</th>
-            <th>Popis</th>
-            <th>Cena</th>
-            <th>Alergeny</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-01.jpg"
-                alt="Vanilková"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Vanilková</td>
-            <td>Jemná krémová chuť s pravou vanilkou, hedvábná konzistence</td>
-            <td>45 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-02.jpg"
-                alt="Čokoládová"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Čokoládová</td>
-            <td>Intenzivní kakaová chuť, bohatá a sametová textura</td>
-            <td>45 Kč</td>
-            <td>7, 8</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-03.jpg"
-                alt="Jahodová"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Jahodová</td>
-            <td>Svěží ovocná chuť z čerstvých jahod, lehká a osvěžující</td>
-            <td>45 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-04.jpg"
-                alt="Malinový sorbet"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Malinový sorbet</td>
-            <td>Intenzivní malinová chuť, ledově osvěžující bez mléka</td>
-            <td>50 Kč</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-05.jpg"
-                alt="Pistáciová"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Pistáciová</td>
-            <td>Oříšková chuť pravých pistácií, krémová s jemnou slaností</td>
-            <td>55 Kč</td>
-            <td>7, 8</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-06.jpg"
-                alt="Stracciatella"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Stracciatella</td>
-            <td>Vanilkový základ s kousky hořké čokolády, kontrastní textura</td>
-            <td>50 Kč</td>
-            <td>7, 8</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-07.jpg"
-                alt="Karamelová"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Karamelová</td>
-            <td>Sladká karamelová chuť s nádechem soli, máslová konzistence</td>
-            <td>50 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-08.jpg"
-                alt="Citronový sorbet"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Citronový sorbet</td>
-            <td>Kyselkavě svěží chuť, ideální pro horké dny</td>
-            <td>50 Kč</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-09.jpg"
-                alt="Kokosová"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Kokosová</td>
-            <td>Exotická kokosová chuť, krémová s kousky kokosu</td>
-            <td>50 Kč</td>
-            <td>7, 8</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-10.jpg"
-                alt="Slaný karamel"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Slaný karamel</td>
-            <td>Sladko-slaná harmonie, bohatá karamelová chuť</td>
-            <td>55 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-11.jpg"
-                alt="Lískooříšková"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Lískooříšková</td>
-            <td>Intenzivní ořechová chuť, krémová s praženými lískovými oříšky</td>
-            <td>55 Kč</td>
-            <td>7, 8</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-12.jpg"
-                alt="Lesní ovoce"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Lesní ovoce</td>
-            <td>Mix malin, borůvek a ostružin, svěží ovocná chuť</td>
-            <td>50 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-01.jpg"
-                alt="Mango"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Mango</td>
-            <td>Exotická sladká chuť zralého manga, tropický zážitek</td>
-            <td>55 Kč</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-02.jpg"
-                alt="Tiramisù"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Tiramisù</td>
-            <td>Italská klasika s mascarpone a kávou, dekadentní chuť</td>
-            <td>60 Kč</td>
-            <td>1, 3, 7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-03.jpg"
-                alt="Banánová"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Banánová</td>
-            <td>Krémová chuť zralých banánů, přirozeně sladká</td>
-            <td>45 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-04.jpg"
-                alt="Pomeranč-grapefruit"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Pomeranč-grapefruit</td>
-            <td>Citrusová kombinace, osvěžující a lehce hořká</td>
-            <td>50 Kč</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-05.jpg"
-                alt="Cookies"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Cookies</td>
-            <td>Vanilkový základ s kousky čokoládových sušenek</td>
-            <td>55 Kč</td>
-            <td>1, 7, 8</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-06.jpg"
-                alt="Mascarpone"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Mascarpone</td>
-            <td>Jemná krémová chuť italského sýra, luxusní textura</td>
-            <td>60 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-07.jpg"
-                alt="Meruňková"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Meruňková</td>
-            <td>Sladká chuť zralých meruněk, letní klasika</td>
-            <td>45 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-08.jpg"
-                alt="Kávová"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Kávová</td>
-            <td>Intenzivní chuť espresso kávy, pro milovníky kofeinu</td>
-            <td>50 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-09.jpg"
-                alt="Cheesecake"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Cheesecake</td>
-            <td>Krémová tvarohová chuť s podtónem sušenky</td>
-            <td>55 Kč</td>
-            <td>1, 7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-10.jpg"
-                alt="Máta-čokoláda"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Máta-čokoláda</td>
-            <td>Osvěžující máta s kousky hořké čokolády</td>
-            <td>50 Kč</td>
-            <td>7, 8</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-11.jpg"
-                alt="Bílá čokoláda"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Bílá čokoláda</td>
-            <td>Sladká a krémová bílá čokoláda, lahodná textura</td>
-            <td>50 Kč</td>
-            <td>7, 8</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-12.jpg"
-                alt="Rum-rozinky"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Rum-rozinky</td>
-            <td>Vanilkový základ s rumem namáčenými rozinkami</td>
-            <td>55 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-01.jpg"
-                alt="Arašídová"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Arašídová</td>
-            <td>Intenzivní chuť pražených arašídů, krémová konzistence</td>
-            <td>55 Kč</td>
-            <td>5, 7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-02.jpg"
-                alt="Zázvorová"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Zázvorová</td>
-            <td>Pikantní zázvorová chuť, zahřívající a svěží</td>
-            <td>50 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-03.jpg"
-                alt="Skořicová"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Skořicová</td>
-            <td>Teplá skořicová chuť, ideální pro zimní měsíce</td>
-            <td>50 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-04.jpg"
-                alt="Hrušková"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Hrušková</td>
-            <td>Jemná ovocná chuť zralých hrušek, delikátní aroma</td>
-            <td>50 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-05.jpg"
-                alt="Marcipánová"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Marcipánová</td>
-            <td>Mandlová chuť s nádechem růžové vody</td>
-            <td>55 Kč</td>
-            <td>7, 8</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-06.jpg"
-                alt="Panna cotta"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Panna cotta</td>
-            <td>Italský dezert v podobě zmrzliny, krémová vanilka</td>
-            <td>55 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-07.jpg"
-                alt="Ananas"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Ananas</td>
-            <td>Tropická chuť čerstvého ananasu, svěží a sladká</td>
-            <td>50 Kč</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-08.jpg"
-                alt="Borůvková"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Borůvková</td>
-            <td>Intenzivní chuť lesních borůvek, antioxidační bomba</td>
-            <td>50 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-09.jpg"
-                alt="Medová"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Medová</td>
-            <td>Přirozená sladkost květového medu, krémová textura</td>
-            <td>55 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-10.jpg"
-                alt="Brownies"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Brownies</td>
-            <td>Čokoládový základ s kousky čokoládového brownies</td>
-            <td>60 Kč</td>
-            <td>1, 3, 7, 8</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-11.jpg"
-                alt="Jogurtová"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Jogurtová</td>
-            <td>Lehce kyselá jogurtová chuť, osvěžující a zdravá</td>
-            <td>45 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-12.jpg"
-                alt="Guarana-cola"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Guarana-cola</td>
-            <td>Energetická chuť s příchutí coly, unikátní zážitek</td>
-            <td>50 Kč</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-01.jpg"
-                alt="Mojito"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Mojito</td>
-            <td>Koktejlová inspirace s limetkou a mátou</td>
-            <td>55 Kč</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-02.jpg"
-                alt="Levandulová"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Levandulová</td>
-            <td>Květinová chuť provence levandule, relaxační aroma</td>
-            <td>55 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-03.jpg"
-                alt="Avokádová"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Avokádová</td>
-            <td>Krémová chuť zralého avokáda, zdravá alternativa</td>
-            <td>60 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-04.jpg"
-                alt="Bazalková"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Bazalková</td>
-            <td>Bylinkový twist s čerstvou bazalkou, neobvyklá kombinace</td>
-            <td>55 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-05.jpg"
-                alt="Marakuja"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Marakuja</td>
-            <td>Exotická kyselkavá chuť tropického ovoce</td>
-            <td>55 Kč</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-06.jpg"
-                alt="Švestková"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Švestková</td>
-            <td>Tradiční česká chuť zralých švestek</td>
-            <td>50 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-07.jpg"
-                alt="Kešu"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Kešu</td>
-            <td>Jemná ořechová chuť kešu oříšků, krémová konzistence</td>
-            <td>60 Kč</td>
-            <td>5, 7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-08.jpg"
-                alt="Třešňová"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Třešňová</td>
-            <td>Sladká chuť zralých třešní, letní klasika</td>
-            <td>50 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-09.jpg"
-                alt="Čokoláda-chilli"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Čokoláda-chilli</td>
-            <td>Pikantní čokoláda s nádechem chilli papričky</td>
-            <td>55 Kč</td>
-            <td>7, 8</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-10.jpg"
-                alt="Rybízová"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Rybízová</td>
-            <td>Kyselkavá chuť červeného rybízu, osvěžující</td>
-            <td>50 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-11.jpg"
-                alt="Raffaello"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Raffaello</td>
-            <td>Kokos s mandlí inspirovaná slavnou bonboniérou</td>
-            <td>60 Kč</td>
-            <td>7, 8</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-12.jpg"
-                alt="Dýňová"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Dýňová</td>
-            <td>Podzimní specialita s příchutí dýně a koření</td>
-            <td>55 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-01.jpg"
-                alt="Kapučíno"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Kapučíno</td>
-            <td>Kávová chuť s mléčnou pěnou, italská inspirace</td>
-            <td>55 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-02.jpg"
-                alt="Nutella"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Nutella</td>
-            <td>Lískooříšková čokoláda inspirovaná slavným krémem</td>
-            <td>60 Kč</td>
-            <td>7, 8</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-03.jpg"
-                alt="Oříšky v karamelu"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Oříšky v karamelu</td>
-            <td>Karamelový základ s praženými oříšky</td>
-            <td>60 Kč</td>
-            <td>7, 8</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-04.jpg"
-                alt="Limetka-kokos"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Limetka-kokos</td>
-            <td>Tropická kombinace kyselé limetky a sladkého kokosu</td>
-            <td>55 Kč</td>
-            <td>8</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-05.jpg"
-                alt="Matcha"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Matcha</td>
-            <td>Japonský zelený čaj, jemně hořká chuť s bohatým aroma</td>
-            <td>60 Kč</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-06.jpg"
-                alt="Black sesame"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Black sesame</td>
-            <td>Asijská specialita z černého sezamu, unikátní chuť</td>
-            <td>60 Kč</td>
-            <td>7, 11</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="/assets/images/zmrzlina-07.jpg"
-                alt="Perník"
-                style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px"
-              />
-            </td>
-            <td>Perník</td>
-            <td>Vánoční specialita s vůní perníkového koření</td>
-            <td>55 Kč</td>
-            <td>1, 7</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table
+          id="dataTable"
+          class="table table-striped align-middle dt-responsive nowrap"
+          style="width: 100%"
+        >
+          <thead>
+            <tr>
+              <th>Foto</th>
+              <th>Zmrzlina</th>
+              <th>Popis</th>
+              <th>Cena</th>
+              <th>Alergeny</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-01.jpg"
+                  alt="Vanilková"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Vanilková</td>
+              <td>
+                Jemná krémová chuť s pravou vanilkou, hedvábná konzistence
+              </td>
+              <td>45 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-02.jpg"
+                  alt="Čokoládová"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Čokoládová</td>
+              <td>Intenzivní kakaová chuť, bohatá a sametová textura</td>
+              <td>45 Kč</td>
+              <td>7, 8</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-03.jpg"
+                  alt="Jahodová"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Jahodová</td>
+              <td>Svěží ovocná chuť z čerstvých jahod, lehká a osvěžující</td>
+              <td>45 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-04.jpg"
+                  alt="Malinový sorbet"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Malinový sorbet</td>
+              <td>Intenzivní malinová chuť, ledově osvěžující bez mléka</td>
+              <td>50 Kč</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-05.jpg"
+                  alt="Pistáciová"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Pistáciová</td>
+              <td>Oříšková chuť pravých pistácií, krémová s jemnou slaností</td>
+              <td>55 Kč</td>
+              <td>7, 8</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-06.jpg"
+                  alt="Stracciatella"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Stracciatella</td>
+              <td>
+                Vanilkový základ s kousky hořké čokolády, kontrastní textura
+              </td>
+              <td>50 Kč</td>
+              <td>7, 8</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-07.jpg"
+                  alt="Karamelová"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Karamelová</td>
+              <td>
+                Sladká karamelová chuť s nádechem soli, máslová konzistence
+              </td>
+              <td>50 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-08.jpg"
+                  alt="Citronový sorbet"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Citronový sorbet</td>
+              <td>Kyselkavě svěží chuť, ideální pro horké dny</td>
+              <td>50 Kč</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-09.jpg"
+                  alt="Kokosová"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Kokosová</td>
+              <td>Exotická kokosová chuť, krémová s kousky kokosu</td>
+              <td>50 Kč</td>
+              <td>7, 8</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-10.jpg"
+                  alt="Slaný karamel"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Slaný karamel</td>
+              <td>Sladko-slaná harmonie, bohatá karamelová chuť</td>
+              <td>55 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-11.jpg"
+                  alt="Lískooříšková"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Lískooříšková</td>
+              <td>
+                Intenzivní ořechová chuť, krémová s praženými lískovými oříšky
+              </td>
+              <td>55 Kč</td>
+              <td>7, 8</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-12.jpg"
+                  alt="Lesní ovoce"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Lesní ovoce</td>
+              <td>Mix malin, borůvek a ostružin, svěží ovocná chuť</td>
+              <td>50 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-01.jpg"
+                  alt="Mango"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Mango</td>
+              <td>Exotická sladká chuť zralého manga, tropický zážitek</td>
+              <td>55 Kč</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-02.jpg"
+                  alt="Tiramisù"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Tiramisù</td>
+              <td>Italská klasika s mascarpone a kávou, dekadentní chuť</td>
+              <td>60 Kč</td>
+              <td>1, 3, 7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-03.jpg"
+                  alt="Banánová"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Banánová</td>
+              <td>Krémová chuť zralých banánů, přirozeně sladká</td>
+              <td>45 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-04.jpg"
+                  alt="Pomeranč-grapefruit"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Pomeranč-grapefruit</td>
+              <td>Citrusová kombinace, osvěžující a lehce hořká</td>
+              <td>50 Kč</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-05.jpg"
+                  alt="Cookies"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Cookies</td>
+              <td>Vanilkový základ s kousky čokoládových sušenek</td>
+              <td>55 Kč</td>
+              <td>1, 7, 8</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-06.jpg"
+                  alt="Mascarpone"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Mascarpone</td>
+              <td>Jemná krémová chuť italského sýra, luxusní textura</td>
+              <td>60 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-07.jpg"
+                  alt="Meruňková"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Meruňková</td>
+              <td>Sladká chuť zralých meruněk, letní klasika</td>
+              <td>45 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-08.jpg"
+                  alt="Kávová"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Kávová</td>
+              <td>Intenzivní chuť espresso kávy, pro milovníky kofeinu</td>
+              <td>50 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-09.jpg"
+                  alt="Cheesecake"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Cheesecake</td>
+              <td>Krémová tvarohová chuť s podtónem sušenky</td>
+              <td>55 Kč</td>
+              <td>1, 7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-10.jpg"
+                  alt="Máta-čokoláda"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Máta-čokoláda</td>
+              <td>Osvěžující máta s kousky hořké čokolády</td>
+              <td>50 Kč</td>
+              <td>7, 8</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-11.jpg"
+                  alt="Bílá čokoláda"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Bílá čokoláda</td>
+              <td>Sladká a krémová bílá čokoláda, lahodná textura</td>
+              <td>50 Kč</td>
+              <td>7, 8</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-12.jpg"
+                  alt="Rum-rozinky"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Rum-rozinky</td>
+              <td>Vanilkový základ s rumem namáčenými rozinkami</td>
+              <td>55 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-01.jpg"
+                  alt="Arašídová"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Arašídová</td>
+              <td>Intenzivní chuť pražených arašídů, krémová konzistence</td>
+              <td>55 Kč</td>
+              <td>5, 7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-02.jpg"
+                  alt="Zázvorová"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Zázvorová</td>
+              <td>Pikantní zázvorová chuť, zahřívající a svěží</td>
+              <td>50 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-03.jpg"
+                  alt="Skořicová"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Skořicová</td>
+              <td>Teplá skořicová chuť, ideální pro zimní měsíce</td>
+              <td>50 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-04.jpg"
+                  alt="Hrušková"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Hrušková</td>
+              <td>Jemná ovocná chuť zralých hrušek, delikátní aroma</td>
+              <td>50 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-05.jpg"
+                  alt="Marcipánová"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Marcipánová</td>
+              <td>Mandlová chuť s nádechem růžové vody</td>
+              <td>55 Kč</td>
+              <td>7, 8</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-06.jpg"
+                  alt="Panna cotta"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Panna cotta</td>
+              <td>Italský dezert v podobě zmrzliny, krémová vanilka</td>
+              <td>55 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-07.jpg"
+                  alt="Ananas"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Ananas</td>
+              <td>Tropická chuť čerstvého ananasu, svěží a sladká</td>
+              <td>50 Kč</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-08.jpg"
+                  alt="Borůvková"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Borůvková</td>
+              <td>Intenzivní chuť lesních borůvek, antioxidační bomba</td>
+              <td>50 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-09.jpg"
+                  alt="Medová"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Medová</td>
+              <td>Přirozená sladkost květového medu, krémová textura</td>
+              <td>55 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-10.jpg"
+                  alt="Brownies"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Brownies</td>
+              <td>Čokoládový základ s kousky čokoládového brownies</td>
+              <td>60 Kč</td>
+              <td>1, 3, 7, 8</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-11.jpg"
+                  alt="Jogurtová"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Jogurtová</td>
+              <td>Lehce kyselá jogurtová chuť, osvěžující a zdravá</td>
+              <td>45 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-12.jpg"
+                  alt="Guarana-cola"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Guarana-cola</td>
+              <td>Energetická chuť s příchutí coly, unikátní zážitek</td>
+              <td>50 Kč</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-01.jpg"
+                  alt="Mojito"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Mojito</td>
+              <td>Koktejlová inspirace s limetkou a mátou</td>
+              <td>55 Kč</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-02.jpg"
+                  alt="Levandulová"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Levandulová</td>
+              <td>Květinová chuť provence levandule, relaxační aroma</td>
+              <td>55 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-03.jpg"
+                  alt="Avokádová"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Avokádová</td>
+              <td>Krémová chuť zralého avokáda, zdravá alternativa</td>
+              <td>60 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-04.jpg"
+                  alt="Bazalková"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Bazalková</td>
+              <td>Bylinkový twist s čerstvou bazalkou, neobvyklá kombinace</td>
+              <td>55 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-05.jpg"
+                  alt="Marakuja"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Marakuja</td>
+              <td>Exotická kyselkavá chuť tropického ovoce</td>
+              <td>55 Kč</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-06.jpg"
+                  alt="Švestková"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Švestková</td>
+              <td>Tradiční česká chuť zralých švestek</td>
+              <td>50 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-07.jpg"
+                  alt="Kešu"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Kešu</td>
+              <td>Jemná ořechová chuť kešu oříšků, krémová konzistence</td>
+              <td>60 Kč</td>
+              <td>5, 7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-08.jpg"
+                  alt="Třešňová"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Třešňová</td>
+              <td>Sladká chuť zralých třešní, letní klasika</td>
+              <td>50 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-09.jpg"
+                  alt="Čokoláda-chilli"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Čokoláda-chilli</td>
+              <td>Pikantní čokoláda s nádechem chilli papričky</td>
+              <td>55 Kč</td>
+              <td>7, 8</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-10.jpg"
+                  alt="Rybízová"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Rybízová</td>
+              <td>Kyselkavá chuť červeného rybízu, osvěžující</td>
+              <td>50 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-11.jpg"
+                  alt="Raffaello"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Raffaello</td>
+              <td>Kokos s mandlí inspirovaná slavnou bonboniérou</td>
+              <td>60 Kč</td>
+              <td>7, 8</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-12.jpg"
+                  alt="Dýňová"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Dýňová</td>
+              <td>Podzimní specialita s příchutí dýně a koření</td>
+              <td>55 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-01.jpg"
+                  alt="Kapučíno"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Kapučíno</td>
+              <td>Kávová chuť s mléčnou pěnou, italská inspirace</td>
+              <td>55 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-02.jpg"
+                  alt="Nutella"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Nutella</td>
+              <td>Lískooříšková čokoláda inspirovaná slavným krémem</td>
+              <td>60 Kč</td>
+              <td>7, 8</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-03.jpg"
+                  alt="Oříšky v karamelu"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Oříšky v karamelu</td>
+              <td>Karamelový základ s praženými oříšky</td>
+              <td>60 Kč</td>
+              <td>7, 8</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-04.jpg"
+                  alt="Limetka-kokos"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Limetka-kokos</td>
+              <td>Tropická kombinace kyselé limetky a sladkého kokosu</td>
+              <td>55 Kč</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-05.jpg"
+                  alt="Matcha"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Matcha</td>
+              <td>Japonský zelený čaj, jemně hořká chuť s bohatým aroma</td>
+              <td>60 Kč</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-06.jpg"
+                  alt="Black sesame"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Black sesame</td>
+              <td>Asijská specialita z černého sezamu, unikátní chuť</td>
+              <td>60 Kč</td>
+              <td>7, 11</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="/assets/images/zmrzlina-07.jpg"
+                  alt="Perník"
+                  style="
+                    width: 80px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                  "
+                />
+              </td>
+              <td>Perník</td>
+              <td>Vánoční specialita s vůní perníkového koření</td>
+              <td>55 Kč</td>
+              <td>1, 7</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <iframe
@@ -762,12 +1053,31 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.5.0/js/responsive.bootstrap5.min.js"></script>
     <script>
       $(document).ready(function () {
         $("#dataTable").DataTable({
+          responsive: {
+            details: {
+              type: "column",
+              target: "tr",
+            },
+          },
           language: {
             url: "//cdn.datatables.net/plug-ins/1.13.7/i18n/cs.json",
-            searchPlaceholder: "Hledat zmrzlinu...",
+            searchPlaceholder: "Zadejte hledaný výraz...",
+            lengthMenu: "Zobrazit na stránce: _MENU_",
+            search: "Vyhledat:",
+            info: "Zobrazeno _START_ až _END_ z _TOTAL_ záznamů",
+            infoEmpty: "Žádné záznamy",
+            infoFiltered: "(filtrováno z _MAX_ celkem)",
+            paginate: {
+              first: "První",
+              last: "Poslední",
+              next: "Další",
+              previous: "Předchozí",
+            },
           },
           pageLength: 10,
           lengthMenu: [5, 10, 25, 50],
@@ -775,6 +1085,11 @@
           columnDefs: [
             { orderable: false, targets: [0] }, // Foto column is not sortable
             { className: "text-nowrap", targets: [3] }, // Cena column - no wrapping
+            { responsivePriority: 1, targets: [1] }, // Zmrzlina - vždy viditelná
+            { responsivePriority: 2, targets: [3] }, // Cena - vysoká priorita
+            { responsivePriority: 3, targets: [0] }, // Foto
+            { responsivePriority: 4, targets: [4] }, // Alergeny
+            { responsivePriority: 5, targets: [2] }, // Popis - skryje se jako první
           ],
         });
       });

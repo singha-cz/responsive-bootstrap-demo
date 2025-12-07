@@ -7,13 +7,10 @@
     <link href="/themes/lux-bootstrap.min.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
     <link rel="icon" href="favicon.ico" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
   </head>
   <body>
-    <iframe src="/components/header.html" style="width: 100%; height: 100%" id="header"></iframe>
+    <site-header></site-header>
+    <script type="module" src="/components/header-component.js"></script>
 
     <!-- Obsah -->
     <div class="container my-5">
@@ -21,9 +18,10 @@
       <div class="text-center mb-5">
         <h1 class="display-4 fw-bold mb-3">O nás</h1>
         <p class="lead text-muted col-lg-8 mx-auto">
-          Jsme společnost Zmrzlio, která se specializuje na výrobu prémiové řemeslné zmrzliny.
-          Používáme pouze kvalitní suroviny a tradiční recepty, abychom vám přinesli autentickou
-          chuť a nezapomenutelný zážitek.
+          Jsme společnost Zmrzlio, která se specializuje na výrobu prémiové
+          řemeslné zmrzliny. Používáme pouze kvalitní suroviny a tradiční
+          recepty, abychom vám přinesli autentickou chuť a nezapomenutelný
+          zážitek.
         </p>
       </div>
 
@@ -33,7 +31,10 @@
           <h2 class="text-center mb-5">Naše cesta</h2>
 
           <!-- Vertikální Timeline -->
-          <div class="timeline position-relative mx-auto" style="max-width: 900px">
+          <div
+            class="timeline position-relative mx-auto"
+            style="max-width: 900px"
+          >
             <!-- Milestone 1 - vlevo -->
             <div class="row mb-5 position-relative">
               <div class="col-md-6 text-md-end pe-md-5">
@@ -41,8 +42,8 @@
                   <h4 class="fw-bold text-primary mb-2">2009</h4>
                   <h5 class="fw-semibold mb-3">Začátky</h5>
                   <p class="text-muted mb-0">
-                    Založení firmy jako rodinného podniku. Začínali jsme s jedním zakladatelem a
-                    velkými ambicemi.
+                    Založení firmy jako rodinného podniku. Začínali jsme s
+                    jedním zakladatelem a velkými ambicemi.
                   </p>
                 </div>
               </div>
@@ -64,7 +65,8 @@
                   <h4 class="fw-bold text-primary mb-2">2014</h4>
                   <h5 class="fw-semibold mb-3">První prodejna</h5>
                   <p class="text-muted mb-0">
-                    Otevřeli jsme naši první kamennou prodejnu a rozšířili tým na 5 zaměstnanců.
+                    Otevřeli jsme naši první kamennou prodejnu a rozšířili tým
+                    na 5 zaměstnanců.
                   </p>
                 </div>
               </div>
@@ -84,8 +86,8 @@
                   <h4 class="fw-bold text-primary mb-2">2019</h4>
                   <h5 class="fw-semibold mb-3">Ocenění</h5>
                   <p class="text-muted mb-0">
-                    Získali jsme prestižní ocenění "Nejlepší zmrzlina roku" a expandovali na 15
-                    zaměstnanců.
+                    Získali jsme prestižní ocenění "Nejlepší zmrzlina roku" a
+                    rozrostli jsme se na 15 zaměstnanců.
                   </p>
                 </div>
               </div>
@@ -105,10 +107,10 @@
               <div class="col-md-6 ps-md-5">
                 <div class="bg-white p-4 rounded-3 shadow-sm">
                   <h4 class="fw-bold text-primary mb-2">2025</h4>
-                  <h5 class="fw-semibold mb-3">Dnešek</h5>
+                  <h5 class="fw-semibold mb-3">Současnost</h5>
                   <p class="text-muted mb-0">
-                    Dnes jsme tým 25 profesionálů s několika pobočkami a stále rostoucí základnou
-                    spokojených zákazníků.
+                    Dnes jsme tým 25 profesionálů s několika pobočkami a stále
+                    rostoucí základnou spokojených zákazníků.
                   </p>
                 </div>
               </div>
@@ -129,7 +131,7 @@
         class="position-relative text-center py-5 rounded overflow-hidden"
         style="min-height: 350px"
       >
-        <!-- Pozadí s fotografií -->
+        <!-- Pozadí s fotkou -->
         <div
           class="position-absolute top-0 start-0 w-100 h-100"
           style="
@@ -144,7 +146,9 @@
         <!-- Obsah -->
         <div class="position-relative text-white" style="z-index: 2">
           <h3 class="mb-4 fw-bold text-light">Chcete vědět více?</h3>
-          <p class="lead mb-4">Rádi odpovíme na vaše dotazy a pozveme vás na ochutnávku.</p>
+          <p class="lead mb-4">
+            Rádi odpovíme na vaše dotazy a pozveme vás na ochutnávku.
+          </p>
           <a href="contact.html" class="btn btn-light btn-lg shadow">
             <i class="bi bi-envelope-fill me-2"></i>Spojte se s námi
           </a>

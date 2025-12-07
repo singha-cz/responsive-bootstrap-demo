@@ -54,13 +54,6 @@
   top: 0;
 }
 
-/* Responsivní timeline pro mobilní zařízení */
-@media (max-width: 768px) {
-  .timeline::before {
-    left: 30px;
-  }
-}
-
 /* Tabulka - sloupec cena bez zalamování */
 #dataTable td:nth-child(5) {
   white-space: nowrap;
@@ -72,18 +65,6 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px 0;
-}
-
-/* Vertikální čára uprostřed */
-.timeline-container::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: linear-gradient(to bottom, #0d6efd, #20c997, #ffc107, #0dcaf0);
-  transform: translateX(-50%);
 }
 
 .timeline-item {
@@ -141,6 +122,14 @@
   right: auto;
 }
 
+.home-cards .card {
+  width: 30%;
+}
+
+.modal-dialog {
+  box-shadow: none;
+}
+
 /* Responsivní design pro menší obrazovky */
 @media (max-width: 768px) {
   .timeline-container::before {
@@ -168,4 +157,148 @@
     left: 42px;
     right: auto;
   }
+
+  .home-cards .card {
+    width: 100%;
+    flex: 1;
+  }
+
+  /* Responzivní tabulka - DataTables */
+
+  /* Menší obrázky na mobilu */
+  #dataTable img {
+    width: 60px !important;
+    height: 45px !important;
+  }
+
+  /* Styl pro rozbalený detail řádku */
+  table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control::before,
+  table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control::before {
+    background-color: var(--bs-primary, #0d6efd);
+  }
+
+  /* Lepší padding pro child rows */
+  table.dataTable > tbody > tr.child ul.dtr-details {
+    padding: 0.5rem;
+  }
+
+  table.dataTable > tbody > tr.child ul.dtr-details > li {
+    border-bottom: 1px solid #dee2e6;
+    padding: 0.5rem 0;
+  }
+
+  /* Stránkování na celou šířku - Předchozí/Další na 50% */
+  .dataTables_wrapper
+    .dataTables_paginate
+    .paginate_button:not(.previous):not(.next) {
+    display: none !important;
+  }
+
+  .dataTables_wrapper .dataTables_paginate {
+    width: 100%;
+    display: flex !important;
+    padding: 0;
+  }
+
+  .dataTables_wrapper .dataTables_paginate .paginate_button.previous,
+  .dataTables_wrapper .dataTables_paginate .paginate_button.next {
+    flex: 1;
+    text-align: center;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  .pagination {
+    flex: 1;
+  }
+
+  .home-cards .card {
+    width: 100%;
+  }
+
+  /* Nav tabs: full-width items on mobile */
+  .nav.nav-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .nav.nav-tabs .nav-item {
+    flex: 1 0 0;
+  }
+  .nav.nav-tabs .nav-link {
+    text-align: left;
+    width: 100%;
+  }
+
+  /* Submit button: full-width on mobile */
+  .btn-mobile-full {
+    width: 100% !important;
+  }
+
+  /* DataTables responsive - roztažení panelů na mobilu */
+
+  /* Vyhledávací panel - full width */
+  div.dataTables_filter {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 1rem;
+  }
+
+  div.dataTables_filter label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    justify-content: space-between;
+  }
+
+  div.dataTables_filter input {
+    width: 100%;
+    margin-left: 0.5rem;
+  }
+
+  /* Počet řádků panel - full width */
+  div.dataTables_length {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 1rem;
+  }
+
+  div.dataTables_length label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  div.dataTables_length select {
+    width: 100%;
+    margin-left: 0.5rem;
+  }
+
+  .offer div:not(.dt-row) div {
+    padding: 0 !important;
+  }
+
+  .blog a.btn {
+    width: 100%;
+    font-size: 14px;
+  }
+  .home-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 990px) {
+  .home-cards .card {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 576px) {
 }

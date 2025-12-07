@@ -6,64 +6,10 @@
     <title>Blog – Zmrzlio</title>
     <link href="/themes/lux-bootstrap.min.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
-    <style>
-      .blog-article-card {
-        height: 270px;
-        overflow: hidden;
-      }
-      .blog-article-card .row {
-        height: 100%;
-      }
-      .blog-article-card .col-md-4 {
-        height: 100%;
-      }
-      .blog-article-card img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        max-height: 270px;
-      }
-      .blog-article-card .col-md-8 {
-        position: relative;
-      }
-      .blog-article-card .card-body {
-        padding-left: 2rem;
-        padding-right: 2rem;
-      }
-      .blog-article-card .btn-read {
-        position: absolute;
-        right: 2rem;
-        bottom: 1rem;
-      }
-
-      @media (max-width: 767px) {
-        .blog-article-card {
-          height: auto;
-          overflow: visible;
-        }
-        .blog-article-card .row {
-          height: auto;
-        }
-        .blog-article-card .col-md-4 {
-          height: auto;
-        }
-        .blog-article-card img {
-          height: auto;
-          max-height: none;
-        }
-        .blog-article-card .btn-read {
-          position: static;
-          margin-top: 1rem;
-        }
-      }
-    </style>
   </head>
-  <body>
-    <iframe
-      src="/components/header.html"
-      style="width: 100%; height: 100%"
-      id="header"
-    ></iframe>
+  <body class="blog">
+    <site-header></site-header>
+    <script type="module" src="/components/header-component.js"></script>
 
     <div class="container my-5">
       <h1 class="mb-4">Blog</h1>
@@ -154,43 +100,6 @@
             <div class="row g-0">
               <div class="col-md-4 overflow-hidden">
                 <img
-                  src="./assets/images/pexels-3.jpeg"
-                  class="img-fluid rounded-start"
-                  alt="Nanuky na tyčce"
-                />
-              </div>
-              <div class="col-md-8 d-flex align-items-start">
-                <div class="card-body">
-                  <p class="text-muted mb-1">
-                    <small>
-                      <i class="bi bi-calendar me-1"></i>25. listopadu 2025
-                      <span class="mx-2">|</span>
-                      <span class="badge bg-info">Tipy</span>
-                    </small>
-                  </p>
-                  <h5 class="card-title">
-                    5 tipů jak vybrat kvalitní nanuk v obchodě
-                  </h5>
-                  <p class="card-text">
-                    Jak poznat kvalitní nanuk od levné náhražky? Prozradíme vám,
-                    na co si dát pozor při čtení etikety a složení. Váš další
-                    nákup zmrzliny bude mnohem lepší.
-                  </p>
-                  <a href="#" class="btn btn-sm btn-primary btn-read"
-                    >Přečíst</a
-                  >
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <!-- Článek 3 -->
-        <div class="col-12 mb-4">
-          <article class="card border-0 shadow-sm blog-article-card">
-            <div class="row g-0">
-              <div class="col-md-4 overflow-hidden">
-                <img
                   src="./assets/images/pexels-4.jpeg"
                   class="img-fluid rounded-start"
                   alt="Čerstvé ovoce na zmrzlinu"
@@ -223,45 +132,7 @@
           </article>
         </div>
 
-        <!-- Článek 4 -->
-        <div class="col-12 mb-4">
-          <article class="card border-0 shadow-sm blog-article-card">
-            <div class="row g-0">
-              <div class="col-md-4 overflow-hidden">
-                <img
-                  src="./assets/images/pexels-5.jpeg"
-                  class="img-fluid rounded-start"
-                  alt="Zmrzlinový kornout"
-                />
-              </div>
-              <div class="col-md-8 d-flex align-items-start">
-                <div class="card-body">
-                  <p class="text-muted mb-1">
-                    <small>
-                      <i class="bi bi-calendar me-1"></i>19. listopadu 2025
-                      <span class="mx-2">|</span>
-                      <span class="badge bg-info">Tipy</span>
-                    </small>
-                  </p>
-                  <h5 class="card-title">
-                    Historie zmrzlinového kornoutu – od náhody k ikoně
-                  </h5>
-                  <p class="card-text">
-                    Věděli jste, že zmrzlinový kornout vznikl čistě náhodou?
-                    Přečtěte si fascinující příběh jeho vzniku. Tento vynález
-                    navždy změnil způsob, jakým si užíváme zmrzlinu. Příběh
-                    začíná na světové výstavě v roce 1904.
-                  </p>
-                  <a href="#" class="btn btn-sm btn-primary btn-read"
-                    >Přečíst</a
-                  >
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <!-- Článek 5 -->
+        <!-- Článek 3 -->
         <div class="col-12 mb-4">
           <article class="card border-0 shadow-sm blog-article-card">
             <div class="row g-0">
@@ -299,7 +170,7 @@
           </article>
         </div>
 
-        <!-- Článek 6 -->
+        <!-- Článek 4 -->
         <div class="col-12 mb-4">
           <article class="card border-0 shadow-sm blog-article-card">
             <div class="row g-0">
@@ -328,46 +199,6 @@
                     vám, jak udržet zmrzlinu v perfektní kondici. Vyhněte se
                     nejběžnějším chybám, které dělá většina lidí. Správná
                     teplota mrazáku je klíčem k dokonalosti.
-                  </p>
-                  <a href="#" class="btn btn-sm btn-primary btn-read"
-                    >Přečíst</a
-                  >
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <!-- Článek 8 -->
-        <div class="col-12 mb-4">
-          <article class="card border-0 shadow-sm blog-article-card">
-            <div class="row g-0">
-              <div class="col-md-4 overflow-hidden">
-                <img
-                  src="./assets/images/pexels-8.jpeg"
-                  class="img-fluid rounded-start"
-                  alt="Kokos a avokádo"
-                />
-              </div>
-              <div class="col-md-8 d-flex align-items-start">
-                <div class="card-body">
-                  <p class="text-muted mb-1">
-                    <small>
-                      <i class="bi bi-calendar me-1"></i>7. listopadu 2025
-                      <span class="mx-2">|</span>
-                      <span class="badge bg-success">Zdraví</span>
-                    </small>
-                  </p>
-                  <h5 class="card-title">
-                    Veganské alternativy zmrzlinových polev – kokos, avokádo a
-                    další
-                  </h5>
-                  <p class="card-text">
-                    Pro všechny, kdo se vyhýbají mléčným výrobkům –
-                    představujeme nejlepší veganské polevy na trhu i domácí
-                    recepty. Chuťově jsou naprosto skvělé a potěší každého
-                    gurmána. Všechny recepty jsou bez laktózy a živočišných
-                    produktů.
                   </p>
                   <a href="#" class="btn btn-sm btn-primary btn-read"
                     >Přečíst</a
